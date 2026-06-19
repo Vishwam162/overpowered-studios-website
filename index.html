@@ -1,225 +1,86 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overpowered Studios | Solo Indie Game Developer & Software Engineer</title>
-    <!-- Core UI Engine & Animation Kits -->
+    <title>Overpowered Studios | Advanced Software Engineering & Game Dev</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script>
         tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        studioDark: '#070A13',
-                        studioCard: '#0F1626',
-                        neonGreen: '#10B981',
-                        neonBlue: '#3B82F6',
-                        neonPurple: '#8B5CF6'
-                    }
-                }
-            }
+            theme: { extend: { colors: { studioDark: '#070A13', studioCard: '#0F1626', neonGreen: '#10B981', neonBlue: '#3B82F6', neonPurple: '#8B5CF6' } } }
         }
     </script>
-    <style>
-        .main-glow {
-            background: radial-gradient(circle at 50% 30%, #1e1b4b 0%, #070A13 80%);
-        }
-        .glow-card:hover {
-            box-shadow: 0 0 25px rgba(59, 130, 246, 0.25);
-            border-color: #3B82F6;
-        }
-        .nexus-card:hover {
-            box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
-            border-color: #8B5CF6;
-        }
-    </style>
+    <style>.main-glow { background: radial-gradient(circle at 50% 30%, #1e1b4b 0%, #070A13 80%); }</style>
 </head>
-<body class="main-glow text-slate-100 min-h-screen font-sans selection:bg-neonBlue selection:text-studioDark overflow-x-hidden">
+<body class="main-glow text-slate-100 min-h-screen font-sans flex flex-col justify-between overflow-x-hidden">
 
     <!-- 🌐 NAVIGATION BAR -->
     <nav class="fixed top-0 w-full z-50 bg-studioDark/80 backdrop-blur-md border-b border-slate-950 px-6">
         <div class="max-w-6xl mx-auto h-20 flex items-center justify-between">
-            
-            <!-- 🎮 UPDATED LOGO CONTAINER WITH BRAND NEW GEMINI LOGO IMAGE -->
-            <div class="flex items-center space-x-4">
+            <a href="index.html" class="flex items-center space-x-4">
                 <div class="w-10 h-10 rounded-full border border-slate-800 bg-studioCard overflow-hidden flex items-center justify-center">
                     <img src="logo.jpg" alt="Overpowered Studios Logo" class="w-full h-full object-cover">
                 </div>
                 <span class="font-black tracking-widest text-sm text-slate-300">OVERPOWERED STUDIOS</span>
-            </div>
-
+            </a>
             <div class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-widest text-slate-400 uppercase">
-                <a href="#about" class="hover:text-white transition">The Developer</a>
-                <a href="#nexus" class="hover:text-white transition">Nexus Lang</a>
-                <a href="#games" class="hover:text-white transition">Studio Lineup</a>
-                <a href="#contact" class="px-4 py-2 rounded-full border border-neonBlue/30 text-neonBlue hover:bg-neonBlue/10 transition">Connect</a>
+                <a href="index.html" class="text-white border-b-2 border-neonBlue pb-1">Studio</a>
+                <a href="founder.html" class="hover:text-white transition">The Founder</a>
+                <a href="lineup.html" class="hover:text-white transition">Pipeline</a>
+                <a href="contact.html" class="px-4 py-2 rounded-full border border-neonBlue/30 text-neonBlue hover:bg-neonBlue/10 transition">Connect</a>
             </div>
         </div>
     </nav>
 
-    <!-- 🌌 SECTION 1: HERO INTRO (SOLO DEVELOPER FOCUS) -->
-    <section id="about" class="min-h-screen pt-24 flex items-center justify-center px-6 relative">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
-            
-            <!-- LEFT: Developer Brand Narrative -->
-            <div class="lg:col-span-7 space-y-6 text-center lg:text-left animate__animated animate__fadeInLeft">
-                <span class="inline-flex items-center space-x-2 px-3 py-1 text-xs font-mono tracking-widest text-neonBlue bg-neonBlue/10 rounded-full border border-neonBlue/20">
-                    <span class="w-2 h-2 rounded-full bg-neonBlue animate-pulse"></span>
-                    <span>SOLO INDIE DEVELOPER & ENGINE ARCHITECT</span>
-                </span>
-                <h1 class="text-4xl md:text-7xl font-black tracking-tighter text-white leading-none">
-                    ONE DEVELOPER.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue via-neonPurple to-neonGreen">LIMITLESS ARCHITECTURE.</span>
-                </h1>
-                <p class="text-base md:text-lg text-slate-400 font-light max-w-xl leading-relaxed">
-                    Hi, I'm Vishwam Phalke. I design custom compilers, high-performance web ecosystems, and immersive 3D gameplay landscapes entirely as a solo engineer. I build structural solutions from scratch.
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-                    <a href="#games" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-neonBlue to-neonPurple text-white font-bold tracking-wide shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all text-center text-sm">
-                        View Active Pipeline
-                    </a>
-                    <a href="#nexus" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-studioCard border border-slate-800 font-bold tracking-wide text-slate-300 hover:bg-slate-800 transition text-center text-sm">
-                        Explore My Language
-                    </a>
+    <!-- 🌌 CORE ECOSYSTEM INTRODUCTION -->
+    <main class="flex-grow pt-40 flex items-center justify-center px-6">
+        <div class="text-center max-w-4xl z-10 mx-auto space-y-6 animate__animated animate__fadeIn">
+            <span class="px-4 py-1.5 text-xs font-semibold tracking-widest text-neonBlue bg-neonBlue/10 rounded-full uppercase border border-neonBlue/20">Independent Engineering Network</span>
+            <h1 class="text-5xl md:text-8xl font-black tracking-tighter text-white leading-none">
+                OVERPOWERED <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue via-neonPurple to-neonGreen">STUDIOS</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
+                An advanced software development network specialized in compiling custom language infrastructure, high-velocity web environments, optimization scripts, and immersive 3D gameplay landscapes from the ground up.
+            </p>
+
+            <!-- 🛠️ CORE TECH CAPABILITIES TRACKER -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto pt-6 text-left">
+                <div class="p-4 bg-studioCard/40 border border-slate-900 rounded-xl">
+                    <div class="text-neonPurple text-lg font-mono mb-1">⚡ 01</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-white">Custom Compilers</div>
+                    <div class="text-[11px] text-slate-500 mt-1 font-light">Lexing & interpretation layers.</div>
+                </div>
+                <div class="p-4 bg-studioCard/40 border border-slate-900 rounded-xl">
+                    <div class="text-neonBlue text-lg font-mono mb-1">🌐 02</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-white">Web Ecosystems</div>
+                    <div class="text-[11px] text-slate-500 mt-1 font-light">Ultra-optimized web applications.</div>
+                </div>
+                <div class="p-4 bg-studioCard/40 border border-slate-900 rounded-xl">
+                    <div class="text-neonGreen text-lg font-mono mb-1">🎮 03</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-white">3D Environments</div>
+                    <div class="text-[11px] text-slate-500 mt-1 font-light">Interactive physics-ready builds.</div>
+                </div>
+                <div class="p-4 bg-studioCard/40 border border-slate-900 rounded-xl">
+                    <div class="text-amber-400 text-lg font-mono mb-1">🛠️ 04</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-white">System Automation</div>
+                    <div class="text-[11px] text-slate-500 mt-1 font-light">Algorithmic execution scripts.</div>
                 </div>
             </div>
 
-            <!-- RIGHT: Profile Image Frame utilizing image_6451c3.jpg -->
-            <div class="lg:col-span-5 flex justify-center animate__animated animate__fadeInRight">
-                <div class="relative group w-72 h-72 md:w-80 md:h-80">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-neonBlue to-neonPurple rounded-full opacity-30 blur-lg group-hover:opacity-50 transition duration-700"></div>
-                    <!-- PHOTO CONTAINER -->
-                    <div class="relative w-full h-full rounded-full border-2 border-slate-800 bg-studioCard overflow-hidden flex items-center justify-center aspect-square">
-                        <img id="devPhoto" src="image_6451c3.jpg" alt="Vishwam Phalke" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-500 group-hover:scale-105 rounded-full">
-                        <div class="absolute inset-0 bg-gradient-to-t from-studioDark/40 via-transparent to-transparent rounded-full"></div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 🧱 SECTION 2: PAST PROJECT LIGHTHOUSE (NEXUS PROGRAMMING LANGUAGE) -->
-    <section id="nexus" class="py-32 px-6 bg-black/20 border-t border-slate-900/40">
-        <div class="max-w-5xl mx-auto">
-            <div class="relative group nexus-card rounded-2xl bg-studioCard border border-purple-500/10 p-8 md:p-12 transition-all duration-500">
-                <div class="absolute top-0 right-0 p-6 opacity-10 text-6xl font-mono text-neonPurple font-black">LIVE</div>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-7 space-y-4">
-                        <span class="px-3 py-1 rounded text-xs font-mono bg-neonPurple/10 text-neonPurple border border-neonPurple/20 uppercase tracking-widest font-bold">In-House Language Architecture</span>
-                        <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white">The Nexus Language Project</h2>
-                        <p class="text-slate-400 font-light text-sm md:text-base leading-relaxed">
-                            Engineered completely from the ground up using custom lexing, structural syntax grouping, and native evaluation pipelines. Nexus is a lightweight, clean interpreter layer built to simplify core programmatic flow routines.
-                        </p>
-                        <div class="pt-4">
-                            <a href="https://vishwam162.github.io/Nexus-Lang/" target="_blank" class="inline-flex items-center px-5 py-2.5 rounded-lg bg-neonPurple text-white font-bold text-xs tracking-wider uppercase shadow-md hover:bg-purple-600 transition tracking-wide">
-                                Launch Project Platform ↗
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Code Preview Wireframe Panel -->
-                    <div class="lg:col-span-5 bg-studioDark rounded-xl border border-slate-800 p-5 font-mono text-xs text-slate-400 space-y-2">
-                        <div class="flex justify-between text-[10px] text-slate-600 border-b border-slate-900 pb-2 mb-3">
-                            <span>NEXUS_CORE_SYSTEM.nx</span>
-                            <span>STATUS: ACTIVE</span>
-                        </div>
-                        <p><span class="text-purple-400">fn</span> <span class="text-blue-400">initialize_engine</span>() {</p>
-                        <p class="pl-4 text-slate-500">// Activating compiler frameworks</p>
-                        <p class="pl-4"><span class="text-emerald-400">print</span>(<span class="text-amber-200">"Nexus Engine Online"</span>);</p>
-                        <p class="pl-4"><span class="text-purple-400">let</span> status = <span class="text-blue-400">true</span>;</p>
-                        <p class="pl-4"><span class="text-purple-400">return</span> status;</p>
-                        <p>}</p>
-                    </div>
-                </div>
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="lineup.html" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-neonBlue to-neonPurple text-white font-bold tracking-wide shadow-lg hover:scale-[1.02] transition-all text-sm">
+                    Explore Architecture Pipeline
+                </a>
+                <a href="founder.html" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-studioCard border border-slate-800 font-bold tracking-wide text-slate-300 hover:bg-slate-800 transition text-sm">
+                    Meet the Architect
+                </a>
             </div>
         </div>
-    </section>
+    </main>
 
-    <!-- 🎮 SECTION 3: REVOLUTIONARY STUDIO PORTFOLIO -->
-    <section id="games" class="py-32 px-6">
-        <div class="max-w-5xl mx-auto space-y-12">
-            <div class="text-center lg:text-left">
-                <span class="text-xs font-bold tracking-widest text-neonGreen uppercase font-mono">Current Engine Build Blueprint</span>
-                <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight mt-1">Overpowered Studios Portfolio</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Project Card 1: Tale of Hiroto -->
-                <div class="bg-studioCard border border-slate-900 rounded-xl p-8 transition duration-300 glow-card group flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[10px] font-mono text-neonBlue bg-neonBlue/10 border border-neonBlue/20 px-2.5 py-0.5 rounded uppercase font-bold tracking-wider">Flagship Development</span>
-                            <span class="text-[10px] font-mono text-slate-500">UE5 Engine</span>
-                        </div>
-                        <h3 class="text-2xl font-black text-white tracking-tight">Project: Tale of Hiroto</h3>
-                        <p class="text-slate-400 text-xs md:text-sm font-light leading-relaxed">
-                            An upcoming standalone atmospheric framework running on dynamic structural matrices, physical world asset tracking, and custom interaction layouts. Engineered solo.
-                        </p>
-                    </div>
-                    <div class="mt-8 pt-4 border-t border-slate-800/50 flex justify-between items-center text-xs font-mono text-slate-500">
-                        <span>STATUS: IN PRODUCTION</span>
-                        <span class="text-neonBlue group-hover:translate-x-1 transition-transform">Specs Matrix →</span>
-                    </div>
-                </div>
-
-                <!-- Project Card 2: Game Factory Concept -->
-                <div class="bg-studioCard border border-slate-900 rounded-xl p-8 transition duration-300 glow-card group flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[10px] font-mono text-neonGreen bg-neonGreen/10 border border-neonGreen/20 px-2.5 py-0.5 rounded uppercase font-bold tracking-wider">Browser Ecosystem</span>
-                            <span class="text-[10px] font-mono text-slate-500">Web Distribution</span>
-                        </div>
-                        <h3 class="text-2xl font-black text-white tracking-tight">The Game Factory Catalog</h3>
-                        <p class="text-slate-400 text-xs md:text-sm font-light leading-relaxed">
-                            Designing a series of ultra-lightweight, high-fps web arcade modules optimized to launch instantly on massive public gaming portals worldwide.
-                        </p>
-                    </div>
-                    <div class="mt-8 pt-4 border-t border-slate-800/50 flex justify-between items-center text-xs font-mono text-slate-500">
-                        <span>TARGET: MULTI-PLATFORM</span>
-                        <span class="text-neonGreen group-hover:translate-x-1 transition-transform">Explore Grid →</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ✉️ SECTION 4: INTERACTIVE FOOTER BLOCK -->
-    <section id="contact" class="py-32 px-6 border-t border-slate-950 bg-black/40 text-center">
-        <div class="max-w-2xl mx-auto space-y-6">
-            <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight">Initialize Developer Sync</h2>
-            <p class="text-slate-400 font-light text-xs md:text-sm max-w-md mx-auto">Connect directly to monitor real-time file updates, alpha build links, and platform deployment tracking metrics.</p>
-            
-            <form id="syncForm" onsubmit="triggerAlert(event)" class="max-w-sm mx-auto flex bg-studioDark p-1.5 rounded-xl border border-slate-800 shadow-xl">
-                <input type="email" id="devEmail" required placeholder="Enter verification email" class="w-full bg-transparent text-slate-100 placeholder-slate-600 px-4 py-2.5 text-xs focus:outline-none font-mono">
-                <button type="submit" class="px-5 py-2.5 rounded-lg bg-neonBlue text-white font-bold text-xs tracking-wider uppercase hover:bg-blue-600 transition-all active:scale-95">
-                    Sync
-                </button>
-            </form>
-            <div id="feedbackLog" class="text-[10px] font-mono text-neonBlue h-2"></div>
-        </div>
-    </section>
-
-    <!-- METADATA SUB-FOOTER -->
-    <footer class="border-t border-slate-950 py-8 text-center text-[10px] font-mono text-slate-600 tracking-widest">
-        <p>© 2026 VISHWAM PHALKE // OVERPOWERED STUDIOS. ALL SYSTEMS OPERATIONAL.</p>
-        <p class="mt-1 text-slate-700">PUNE // MH // IN</p>
+    <footer class="border-t border-slate-950/60 py-8 text-center text-[10px] font-mono text-slate-600 tracking-widest bg-black/10">
+        <p>© 2026 OVERPOWERED STUDIOS. SOFTWARE ENGINEERING & SYSTEM DESIGN pipelines OPERATIONAL.</p>
     </footer>
-
-    <!-- INTERACTION LOGIC -->
-    <script>
-        function triggerAlert(e) {
-            e.preventDefault();
-            const input = document.getElementById('devEmail');
-            const log = document.getElementById('feedbackLog');
-            if(input.value) {
-                log.innerText = `[ INITIALIZED ] SERVER_TOKEN_SYNCED // ACCESS VERIFIED FOR: ${input.value.toUpperCase()}`;
-                input.value = '';
-                setTimeout(() => log.innerText = '', 4000);
-            }
-        }
-    </script>
 </body>
 </html>
