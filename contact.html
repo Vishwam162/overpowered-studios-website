@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overpowered Studios | Connect</title>
+    <meta name="description" content="Contact Overpowered Studios directly via secure email integration or telecom line.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <script>
-        tailwind.config = {
-            theme: { extend: { colors: { studioDark: '#070A13', studioCard: '#0F1626', neonGreen: '#10B981', neonBlue: '#3B82F6', neonPurple: '#8B5CF6' } } }
-        }
-    </script>
-    <style>.main-glow { background: radial-gradient(circle at 50% 30%, #1e1b4b 0%, #070A13 80%); }</style>
+    <script>tailwind.config = { theme: { extend: { colors: { studioDark: '#070A13', studioCard: '#0F1626', neonGreen: '#10B981', neonBlue: '#3B82F6', neonPurple: '#8B5CF6' } } } }</script>
+    <style>.main-glow { background: radial-gradient(circle at 50% 10%, #1e1b4b 0%, #070A13 100%); }</style>
 </head>
-<body class="main-glow text-slate-100 min-h-screen font-sans flex flex-col justify-between overflow-x-hidden">
+<body class="main-glow text-slate-100 min-h-screen font-sans overflow-x-hidden">
 
-    <!-- 🌐 NAVIGATION BAR -->
-    <nav class="fixed top-0 w-full z-50 bg-studioDark/80 backdrop-blur-md border-b border-slate-950 px-6">
+    <!-- 🌐 NAVIGATION BAR (Same as Index) -->
+    <nav class="fixed top-0 w-full z-50 bg-studioDark/90 backdrop-blur-lg border-b border-slate-900 px-6">
         <div class="max-w-6xl mx-auto h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center space-x-4">
                 <div class="w-10 h-10 rounded-full border border-slate-800 bg-studioCard overflow-hidden flex items-center justify-center">
                     <img src="logo.jpg" alt="Overpowered Studios Logo" class="w-full h-full object-cover">
                 </div>
-                <span class="font-black tracking-widest text-sm text-slate-300">OVERPOWERED STUDIOS</span>
+                <span class="font-black tracking-widest text-sm text-slate-300 hidden sm:block">OVERPOWERED STUDIOS</span>
             </a>
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-slate-300">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
             <div class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-widest text-slate-400 uppercase">
                 <a href="index.html" class="hover:text-white transition">Studio</a>
                 <a href="founder.html" class="hover:text-white transition">The Founder</a>
@@ -31,34 +31,84 @@
                 <a href="contact.html" class="text-white border-b-2 border-neonBlue pb-1">Connect</a>
             </div>
         </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-studioCard absolute w-full left-0 top-20 flex flex-col p-6 space-y-4 text-sm font-bold tracking-widest uppercase shadow-2xl">
+            <a href="index.html">Studio</a>
+            <a href="founder.html">The Founder</a>
+            <a href="lineup.html">Pipeline</a>
+            <a href="contact.html" class="text-neonBlue">Connect</a>
+        </div>
     </nav>
 
-    <!-- ✉️ COMMUNICATION NODE MAP -->
-    <main class="flex-grow pt-36 px-6 max-w-4xl mx-auto w-full flex flex-col justify-center animate__animated animate__fadeInUp">
-        <div class="text-center space-y-4 mb-16">
-            <h2 class="text-4xl md:text-6xl font-black text-white tracking-tight">Initialize Studio Sync</h2>
-            <p class="text-slate-400 font-light text-xs md:text-sm max-w-md mx-auto">Open a high-priority communication routing block straight to our terminal matrix array.</p>
+    <!-- ✉️ COMMUNICATION INTERFACE -->
+    <main class="pt-36 px-6 max-w-5xl mx-auto pb-24">
+        <div class="text-center space-y-4 mb-16 animate__animated animate__fadeInDown">
+            <h2 class="text-4xl md:text-6xl font-black text-white tracking-tight">Initialize Comm Link</h2>
+            <p class="text-slate-400 font-light text-sm max-w-lg mx-auto">Send an encrypted payload directly to our servers or utilize the manual telecom line.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto w-full">
-            <!-- Email Vector Block -->
-            <a href="mailto:pravinphalke42@gmail.com" class="bg-studioCard border border-slate-900 p-8 rounded-xl flex flex-col items-center justify-center space-y-4 group hover:border-neonBlue transition duration-300">
-                <div class="w-12 h-12 rounded-lg bg-neonBlue/10 flex items-center justify-center text-neonBlue text-xl font-mono group-hover:scale-110 transition">✉</div>
-                <span class="text-xs font-mono tracking-widest text-slate-500 uppercase">Direct Email Array</span>
-                <span class="text-sm font-bold text-white group-hover:text-neonBlue transition">pravinphalke42@gmail.com</span>
-            </a>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            
+            <!-- Direct Email Form (Powered by FormSubmit) -->
+            <div class="bg-studioCard border border-slate-800 p-8 rounded-2xl shadow-2xl animate__animated animate__fadeInLeft">
+                <h3 class="text-xl font-bold text-white mb-6 flex items-center"><span class="w-3 h-3 rounded-full bg-neonBlue mr-3 animate-pulse"></span> Direct Interface</h3>
+                
+                <!-- The Form Action sends data directly to your email -->
+                <form action="https://formsubmit.co/pravinphalke42@gmail.com" method="POST" class="space-y-4">
+                    <!-- Disables the annoying captcha page from formsubmit -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Returns user to your contact page after sending -->
+                    <input type="hidden" name="_next" value="https://vishwam162.github.io/overpowered-studios-website/contact.html">
+                    
+                    <div>
+                        <label class="block text-xs font-mono text-slate-500 mb-1 uppercase">Transmission Name</label>
+                        <input type="text" name="name" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:border-neonBlue focus:outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono text-slate-500 mb-1 uppercase">Return Address (Email)</label>
+                        <input type="email" name="email" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:border-neonBlue focus:outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono text-slate-500 mb-1 uppercase">Encrypted Payload (Message)</label>
+                        <textarea name="message" rows="4" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:border-neonBlue focus:outline-none transition resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-neonBlue to-blue-600 text-white font-bold py-4 rounded-lg mt-4 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition duration-300">
+                        Send Email
+                    </button>
+                </form>
+            </div>
 
-            <!-- Phone Vector Block -->
-            <a href="tel:+919699893056" class="bg-studioCard border border-slate-900 p-8 rounded-xl flex flex-col items-center justify-center space-y-4 group hover:border-neonGreen transition duration-300">
-                <div class="w-12 h-12 rounded-lg bg-neonGreen/10 flex items-center justify-center text-neonGreen text-xl font-mono group-hover:scale-110 transition">☎</div>
-                <span class="text-xs font-mono tracking-widest text-slate-500 uppercase">Secure Telecom Line</span>
-                <span class="text-sm font-bold text-white group-hover:text-neonGreen transition">+91 96998 93056</span>
-            </a>
+            <!-- Manual Telecom & Stats -->
+            <div class="space-y-8 animate__animated animate__fadeInRight">
+                <!-- Phone Block -->
+                <a href="tel:+919699893056" class="block bg-studioCard border border-slate-800 p-8 rounded-2xl hover:border-neonGreen transition duration-300 group">
+                    <div class="flex items-center space-x-6">
+                        <div class="w-16 h-16 rounded-xl bg-neonGreen/10 flex items-center justify-center text-neonGreen text-3xl group-hover:scale-110 transition">☎</div>
+                        <div>
+                            <span class="block text-xs font-mono tracking-widest text-slate-500 uppercase mb-1">Manual Telecom Line</span>
+                            <span class="block text-2xl font-black text-white group-hover:text-neonGreen transition">+91 96998 93056</span>
+                            <span class="block text-xs text-slate-500 mt-2">Tap to initialize call on mobile hardware.</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Location Block -->
+                <div class="bg-studioCard border border-slate-800 p-8 rounded-2xl">
+                    <div class="flex items-center space-x-6">
+                        <div class="w-16 h-16 rounded-xl bg-neonPurple/10 flex items-center justify-center text-neonPurple text-3xl">📍</div>
+                        <div>
+                            <span class="block text-xs font-mono tracking-widest text-slate-500 uppercase mb-1">Server Location</span>
+                            <span class="block text-xl font-bold text-white">Pune, Maharashtra</span>
+                            <span class="block text-sm font-light text-slate-400 mt-1">Republic of India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
-    <footer class="border-t border-slate-950/60 py-8 text-center text-[10px] font-mono text-slate-600 tracking-widest bg-black/10">
-        <p>© 2026 OVERPOWERED STUDIOS. COMMUNICATIONS PIPELINE FULLY MONITORED.</p>
+    <footer class="border-t border-slate-950/60 py-12 text-center text-xs font-mono text-slate-600 tracking-widest bg-studioDark">
+        <p>© 2026 OVERPOWERED STUDIOS. ALL CONNECTIONS ENCRYPTED.</p>
     </footer>
 </body>
 </html>
