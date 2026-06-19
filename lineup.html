@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overpowered Studios | Projects & Tooling Pipeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { studioDark: '#070A13', studioCard: '#0F1626', neonGreen: '#10B981', neonBlue: '#3B82F6', neonPurple: '#8B5CF6' } } }
+        }
+    </script>
+    <style>
+        .main-glow { background: radial-gradient(circle at 50% 30%, #1e1b4b 0%, #070A13 80%); }
+        .glow-card:hover { box-shadow: 0 0 25px rgba(59, 130, 246, 0.25); border-color: #3B82F6; }
+    </style>
+</head>
+<body class="main-glow text-slate-100 min-h-screen font-sans flex flex-col justify-between overflow-x-hidden">
+
+    <!-- 🌐 NAVIGATION BAR -->
+    <nav class="fixed top-0 w-full z-50 bg-studioDark/80 backdrop-blur-md border-b border-slate-950 px-6">
+        <div class="max-w-6xl mx-auto h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-4">
+                <div class="w-10 h-10 rounded-full border border-slate-800 bg-studioCard overflow-hidden flex items-center justify-center">
+                    <img src="logo.jpg" alt="Overpowered Studios Logo" class="w-full h-full object-cover">
+                </div>
+                <span class="font-black tracking-widest text-sm text-slate-300">OVERPOWERED STUDIOS</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-widest text-slate-400 uppercase">
+                <a href="index.html" class="hover:text-white transition">Studio</a>
+                <a href="founder.html" class="hover:text-white transition">The Founder</a>
+                <a href="lineup.html" class="text-white border-b-2 border-neonBlue pb-1">Pipeline</a>
+                <a href="contact.html" class="px-4 py-2 rounded-full border border-neonBlue/30 text-neonBlue hover:bg-neonBlue/10 transition">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 🎮 PROJECTS ENTIRE REGISTRY -->
+    <main class="flex-grow pt-36 px-6 max-w-5xl mx-auto w-full animate__animated animate__fadeIn">
+        <div class="space-y-3 mb-12 text-center md:text-left">
+            <span class="text-xs font-bold tracking-widest text-neonGreen uppercase font-mono">Central Deployment Registry</span>
+            <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight">Active Software & Interactive Pipeline</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Project 1: Nexus Lang -->
+            <div class="bg-studioCard border border-purple-500/10 rounded-xl p-8 transition duration-300 glow-card flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] font-mono text-neonPurple bg-neonPurple/10 border border-neonPurple/20 px-2.5 py-0.5 rounded uppercase font-bold tracking-wider">Language Infrastructure</span>
+                        <span class="text-[10px] font-mono text-slate-500">Active Build</span>
+                    </div>
+                    <h3 class="text-2xl font-black text-white tracking-tight">The Nexus Language</h3>
+                    <p class="text-slate-400 text-xs md:text-sm font-light leading-relaxed">
+                        A custom programming language built using Python lexing/parsing workflows and structural token evaluation arrays designed to simplify complex algorithmic routines.
+                    </p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-slate-800/50">
+                    <a href="https://vishwam162.github.io/Nexus-Lang/" target="_blank" class="text-xs font-mono text-neonPurple hover:underline">Launch System Source ↗</a>
+                </div>
+            </div>
+
+            <!-- Project 2: Web Ecosystem Core -->
+            <div class="bg-studioCard border border-slate-900 rounded-xl p-8 transition duration-300 glow-card flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] font-mono text-neonBlue bg-neonBlue/10 border border-neonBlue/20 px-2.5 py-0.5 rounded uppercase font-bold tracking-wider">Web Software Systems</span>
+                        <span class="text-[10px] font-mono text-slate-500">Live</span>
+                    </div>
+                    <h3 class="text-2xl font-black text-white tracking-tight">Optimized Web Infrastructures</h3>
+                    <p class="text-slate-400 text-xs md:text-sm font-light leading-relaxed">
+                        Compiling fully custom, lightweight responsive website layers, dynamic interactive forms, and database tracking panels engineered to operate with ultra-fast latency.
+                    </p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-slate-800/50 flex justify-between items-center text-xs font-mono text-slate-500">
+                    <span class="text-neonBlue">Architecture Intact</span>
+                </div>
+            </div>
+
+            <!-- Project 3: Tale of Hiroto -->
+            <div class="bg-studioCard border border-slate-900 rounded-xl p-8 transition duration-300 glow-card flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] font-mono text-neonGreen bg-neonGreen/10 border border-neonGreen/20 px-2.5 py-0.5 rounded uppercase font-bold tracking-wider">Interactive Engines</span>
+                        <span class="text-[10px] font-mono text-slate-500">UE5 Build</span>
+                    </div>
+                    <h3 class="text-2xl font-black text-white tracking-tight">Project: Tale of Hiroto</h3>
+                    <p class="text-slate-400 text-xs md:text-sm font-light leading-relaxed">
+                        An upcoming premium standalone interactive atmosphere engine mapping dynamic physical terrain variables, complex item interactions, and high-fidelity asset arrays.
+                    </p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-slate-800/50 flex justify-between items-center text-xs font-mono text-slate-500">
+                    <span class="text-slate-500">STATUS: INCUBATION</span>
+                </div>
+            </div>
+
+            <!-- Project 4: The Game Factory -->
+            <div class="bg-studioCard border border-slate-900 rounded-xl p-8 transition duration-300 glow-card flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] font-mono text-amber-400 bg-amber-400/10 border border-amber-400/20 px-2.5 py-0.5 rounded uppercase font-bold tracking-wider">Web Distribution</span>
+                        <span class="text-[10px] font-mono text-slate-500">Arcade Net</span>
+                    </div>
+                    <h3 class="text-2xl font-black text-white tracking-tight">The Game Factory Catalog</h3>
+                    <p class="text-slate-400 text-xs md:text-sm font-light leading-relaxed">
+                        Designing high-frequency, responsive browser modules structured to render instantly on massive distribution networks without frame drops on any specifications.
+                    </p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-slate-800/50 flex justify-between items-center text-xs font-mono text-slate-500">
+                    <span class="text-slate-500">SCALED ROUTING LAYER</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-950/60 py-8 text-center text-[10px] font-mono text-slate-600 tracking-widest bg-black/10">
+        <p>© 2026 OVERPOWERED STUDIOS. SYSTEM PIPELINES INDEXED.</p>
+    </footer>
+</body>
+</html>
